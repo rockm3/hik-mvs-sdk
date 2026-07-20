@@ -1,5 +1,5 @@
 use anyhow::{Context, Result};
-use hik_sdk::Sdk;
+use hik_mvs_sdk::Sdk;
 
 fn main() -> Result<()> {
     let sdk = Sdk::initialize().context("初始化 MVS SDK")?;

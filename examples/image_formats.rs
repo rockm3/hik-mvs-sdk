@@ -1,5 +1,5 @@
 use anyhow::{Context, Result};
-use hik_sdk::{ImageFormat, OutputFormat, Sdk};
+use hik_mvs_sdk::{ImageFormat, OutputFormat, Sdk};
 use std::env;
 
 fn main() -> Result<()> {

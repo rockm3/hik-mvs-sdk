@@ -2,7 +2,7 @@
 
 ## Stable boundaries
 
-The public interoperability boundary is `native/include/hik_sdk.h`. It uses a C ABI and
+The public interoperability boundary is `native/include/hik_mvs_sdk.h`. It uses a C ABI and
 fixed-width integer types. MVS structs, C++ classes, STL containers, exceptions, `cv::Mat`,
 and Rust-owned types must never cross this boundary.
 

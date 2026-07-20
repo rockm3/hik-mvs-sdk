@@ -1,5 +1,5 @@
 use anyhow::{Context, Result};
-use hik_sdk::{FlipDirection, ImageFormat, OutputFormat, Rotation, Sdk};
+use hik_mvs_sdk::{FlipDirection, ImageFormat, OutputFormat, Rotation, Sdk};
 use std::env;
 
 fn main() -> Result<()> {

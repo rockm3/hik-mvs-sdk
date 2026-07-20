@@ -1,4 +1,4 @@
-# hik-sdk
+# hik-mvs-sdk
 
 Safe Rust bindings and a C++ resource-management layer for the Hikrobot MVS SDK.
 
@@ -9,14 +9,14 @@ Cargo 依赖，不需要 CMake，也不需要先构建本项目的 DLL。
 
 ```toml
 [dependencies]
-hik-sdk = { git = "https://github.com/your-org/hik-sdk" }
+hik-mvs-sdk = { git = "https://github.com/your-org/hik-mvs-sdk" }
 ```
 
 发布 crates.io 后可改为版本依赖：
 
 ```toml
 [dependencies]
-hik-sdk = "0.1"
+hik-mvs-sdk = "0.1"
 ```
 
 ## License / 开源许可证
@@ -67,21 +67,21 @@ $env:PATH = 'C:\my-mvs-runtime;' + $env:PATH
 ## 模块结构 / Module layout
 
 ```text
-hik_sdk::sdk       SDK 生命周期、枚举、Force IP、Action Command
-hik_sdk::camera    相机句柄与采集控制
-hik_sdk::frame     Frame、OwnedFrame、Chunk 和输出格式
-hik_sdk::imaging   图片编码、旋转和翻转
-hik_sdk::events    异常、相机事件和网络统计
-hik_sdk::params    GenICam 整数/浮点约束
-hik_sdk::error     Error 与 Result
+hik_mvs_sdk::sdk       SDK 生命周期、枚举、Force IP、Action Command
+hik_mvs_sdk::camera    相机句柄与采集控制
+hik_mvs_sdk::frame     Frame、OwnedFrame、Chunk 和输出格式
+hik_mvs_sdk::imaging   图片编码、旋转和翻转
+hik_mvs_sdk::events    异常、相机事件和网络统计
+hik_mvs_sdk::params    GenICam 整数/浮点约束
+hik_mvs_sdk::error     Error 与 Result
 ```
 
 推荐新代码按模块导入；原有扁平路径继续兼容：
 
 ```rust
-use hik_sdk::sdk::Sdk;
-use hik_sdk::frame::OutputFormat;
-use hik_sdk::error::Result;
+use hik_mvs_sdk::error::Result;
+use hik_mvs_sdk::frame::OutputFormat;
+use hik_mvs_sdk::sdk::Sdk;
 ```
 
 ## 范例

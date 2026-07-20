@@ -1,5 +1,5 @@
 use anyhow::{bail, Context, Result};
-use hik_sdk::Sdk;
+use hik_mvs_sdk::Sdk;
 use std::{env, net::Ipv4Addr};
 
 fn main() -> Result<()> {

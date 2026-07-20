@@ -1,5 +1,5 @@
 use anyhow::{bail, Context, Result};
-use hik_sdk::{OutputFormat, Sdk};
+use hik_mvs_sdk::{OutputFormat, Sdk};
 use std::env;
 
 fn main() -> Result<()> {

@@ -1,4 +1,4 @@
-#include "hik_sdk.h"
+#include "hik_mvs_sdk.h"
 #include "MvCameraControl.h"
 
 #include <algorithm>

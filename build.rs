@@ -9,7 +9,7 @@ fn main() {
     let target_arch = env::var("CARGO_CFG_TARGET_ARCH").expect("Cargo did not set target arch");
     let target_env = env::var("CARGO_CFG_TARGET_ENV").unwrap_or_default();
     if target_arch != "x86_64" {
-        panic!("hik-sdk currently supports x86_64 MVS SDKs; target was {target_arch}");
+        panic!("hik-mvs-sdk currently supports x86_64 MVS SDKs; target was {target_arch}");
     }
 
     let mvs = ["HIK_MVS_SDK_DIR", "MVS_SDK_DIR", "MVCAM_COMMON_RUNENV"]
@@ -54,14 +54,14 @@ fn main() {
         .std("c++17")
         .include(include_dir)
         .include("native/include")
-        .file("native/src/hik_sdk.cpp")
-        .compile("hik_sdk_native");
+        .file("native/src/hik_mvs_sdk.cpp")
+        .compile("hik_mvs_sdk_native");
 
     println!("cargo:rustc-link-search=native={}", library_dir.display());
     println!("cargo:rustc-link-lib=dylib=MvCameraControl");
     println!("cargo:rerun-if-env-changed=HIK_MVS_SDK_DIR");
     println!("cargo:rerun-if-env-changed=MVS_SDK_DIR");
     println!("cargo:rerun-if-env-changed=MVCAM_COMMON_RUNENV");
-    println!("cargo:rerun-if-changed=native/include/hik_sdk.h");
-    println!("cargo:rerun-if-changed=native/src/hik_sdk.cpp");
+    println!("cargo:rerun-if-changed=native/include/hik_mvs_sdk.h");
+    println!("cargo:rerun-if-changed=native/src/hik_mvs_sdk.cpp");
 }

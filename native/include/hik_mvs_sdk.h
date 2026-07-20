@@ -1,5 +1,5 @@
-#ifndef HIK_SDK_H
-#define HIK_SDK_H
+#ifndef HIK_MVS_SDK_H
+#define HIK_MVS_SDK_H
 
 #include <stddef.h>
 #include <stdint.h>

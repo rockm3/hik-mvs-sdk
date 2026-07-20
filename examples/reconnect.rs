@@ -1,5 +1,5 @@
 use anyhow::{Context, Result};
-use hik_sdk::Sdk;
+use hik_mvs_sdk::Sdk;
 use std::{env, thread, time::Duration};
 
 fn main() -> Result<()> {
