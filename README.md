@@ -9,7 +9,7 @@ Cargo 依赖，不需要 CMake，也不需要先构建本项目的 DLL。
 
 ```toml
 [dependencies]
-hik-mvs-sdk = { git = "https://github.com/your-org/hik-mvs-sdk" }
+hik-mvs-sdk = { git = "https://github.com/rockm3/hik-mvs-sdk" }
 ```
 
 发布 crates.io 后可改为版本依赖：

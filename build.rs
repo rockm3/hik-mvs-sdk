@@ -5,6 +5,14 @@ fn first_existing(candidates: impl IntoIterator<Item = PathBuf>) -> Option<PathB
 }
 
 fn main() {
+    println!("cargo:rerun-if-env-changed=HIK_MVS_SKIP_NATIVE");
+
+    // Hosted documentation and source-only CI do not have the proprietary MVS SDK installed.
+    // 托管文档和仅检查源码的 CI 环境没有安装专有的 MVS SDK。
+    if env::var_os("DOCS_RS").is_some() || env::var_os("HIK_MVS_SKIP_NATIVE").is_some() {
+        return;
+    }
+
     let target_os = env::var("CARGO_CFG_TARGET_OS").expect("Cargo did not set target OS");
     let target_arch = env::var("CARGO_CFG_TARGET_ARCH").expect("Cargo did not set target arch");
     let target_env = env::var("CARGO_CFG_TARGET_ENV").unwrap_or_default();

@@ -7,7 +7,10 @@ build = "build.rs"
 description = "Safe Rust bindings for Hikrobot MVS cameras"
 readme = "README.md"
 documentation = "https://docs.rs/hik-mvs-sdk"
+homepage = "https://github.com/rockm3/hik-mvs-sdk"
+repository = "https://github.com/rockm3/hik-mvs-sdk"
 license = "MIT OR Apache-2.0"
+publish = ["crates-io"]
 keywords = ["hikrobot", "camera", "machine-vision", "ffi"]
 categories = ["api-bindings", "hardware-support"]
 include = [
@@ -19,6 +22,7 @@ include = [
     "Cargo.toml",
     "README.md",
     "COMPATIBILITY.md",
+    "RELEASING.md",
     "LICENSE-MIT",
     "LICENSE-APACHE",
 ]
@@ -35,6 +39,9 @@ thiserror = "1.0.69"
 
 [dev-dependencies]
 anyhow = "1.0.86"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-pc-windows-msvc", "x86_64-unknown-linux-gnu"]
 
 [[example]]
 name = "enumerate"
