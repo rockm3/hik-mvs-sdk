@@ -1,0 +1,12 @@
+/target
+/build
+/.idea
+frame.ppm
+camera_features.ini
+frame.bmp
+frame.jpg
+frame.png
+frame.tiff
+capture.avi
+rotated.png
+flipped.png

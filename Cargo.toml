@@ -1,0 +1,113 @@
+[package]
+name = "hik-sdk"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+build = "build.rs"
+description = "Safe Rust bindings for Hikrobot MVS cameras"
+readme = "README.md"
+documentation = "https://docs.rs/hik-sdk"
+license = "MIT OR Apache-2.0"
+keywords = ["hikrobot", "camera", "machine-vision", "ffi"]
+categories = ["api-bindings", "hardware-support"]
+include = [
+    "src/**",
+    "native/include/**",
+    "native/src/**",
+    "examples/**",
+    "build.rs",
+    "Cargo.toml",
+    "README.md",
+    "COMPATIBILITY.md",
+    "LICENSE-MIT",
+    "LICENSE-APACHE",
+]
+
+[lib]
+name = "hik_sdk"
+path = "src/lib.rs"
+
+[build-dependencies]
+cc = "1.0.83"
+
+[dependencies]
+thiserror = "1.0.69"
+
+[dev-dependencies]
+anyhow = "1.0.86"
+
+[[example]]
+name = "enumerate"
+path = "examples/enumerate.rs"
+
+[[example]]
+name = "grab_one"
+path = "examples/grab_one.rs"
+
+[[example]]
+name = "continuous"
+path = "examples/continuous.rs"
+
+[[example]]
+name = "software_trigger"
+path = "examples/software_trigger.rs"
+
+[[example]]
+name = "parameters"
+path = "examples/parameters.rs"
+
+[[example]]
+name = "multi_camera"
+path = "examples/multi_camera.rs"
+
+[[example]]
+name = "feature_file"
+path = "examples/feature_file.rs"
+
+[[example]]
+name = "force_ip"
+path = "examples/force_ip.rs"
+
+[[example]]
+name = "reconnect"
+path = "examples/reconnect.rs"
+
+[[example]]
+name = "image_callback"
+path = "examples/image_callback.rs"
+
+[[example]]
+name = "exception_callback"
+path = "examples/exception_callback.rs"
+
+[[example]]
+name = "event_callback"
+path = "examples/event_callback.rs"
+
+[[example]]
+name = "network_stats"
+path = "examples/network_stats.rs"
+
+[[example]]
+name = "user_set"
+path = "examples/user_set.rs"
+
+[[example]]
+name = "image_formats"
+path = "examples/image_formats.rs"
+
+[[example]]
+name = "recording"
+path = "examples/recording.rs"
+
+[[example]]
+name = "image_transform"
+path = "examples/image_transform.rs"
+
+[[example]]
+name = "chunk_data"
+path = "examples/chunk_data.rs"
+
+[[example]]
+name = "action_command"
+path = "examples/action_command.rs"
