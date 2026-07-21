@@ -21,6 +21,7 @@ include = [
     "build.rs",
     "Cargo.toml",
     "README.md",
+    "README.zh-CN.md",
     "COMPATIBILITY.md",
     "RELEASING.md",
     "LICENSE-MIT",
