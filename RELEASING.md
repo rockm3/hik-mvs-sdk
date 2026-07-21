@@ -57,7 +57,7 @@ For later releases, update `version` in `Cargo.toml`, commit it, and push a matc
 后续发布时，更新 `Cargo.toml` 中的 `version`，提交后推送匹配的标签：
 
 ```powershell
-git tag v0.1.0
+git tag vX.Y.Z
 git push origin main --tags
 ```
 
